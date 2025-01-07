@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 这将是我们加载图片的地方 -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@id/btnNormalLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 正常加载图片 -->
+    <Button
+        android:id="@+id/btnNormalLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普通加载"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 圆形裁剪 -->
+    <Button
+        android:id="@+id/btnCircleCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆形裁剪"
+        app:layout_constraintTop_toBottomOf="@id/btnNormalLoad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 圆角裁剪 -->
+    <Button
+        android:id="@+id/btnRoundedCorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆角裁剪"
+        app:layout_constraintTop_toBottomOf="@id/btnCircleCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 加载并调整大小 -->
+    <Button
+        android:id="@+id/btnResize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调整大小"
+        app:layout_constraintTop_toBottomOf="@id/btnRoundedCorners"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 加载占位符 -->
+    <Button
+        android:id="@+id/btnPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="占位符"
+        app:layout_constraintTop_toBottomOf="@id/btnResize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 错误占位符 -->
+    <Button
+        android:id="@+id/btnErrorImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="错误占位符"
+        app:layout_constraintTop_toBottomOf="@id/btnPlaceholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 中心裁剪 -->
+    <Button
+        android:id="@+id/btnCenterCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CenterCrop"
+        app:layout_constraintTop_toBottomOf="@id/btnErrorImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 使用 fitCenter -->
+    <Button
+        android:id="@+id/btnFitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FitCenter"
+        app:layout_constraintTop_toBottomOf="@id/btnCenterCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 使用缓存策略 -->
+    <Button
+        android:id="@+id/btnCacheStrategy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="缓存策略"
+        app:layout_constraintTop_toBottomOf="@id/btnFitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
